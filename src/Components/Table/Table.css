@@ -1,0 +1,45 @@
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+}
+
+.thead {
+    text-align: left;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.delete-btn {
+    background-color: rgb(232, 136, 136);
+    max-width: fit-content;
+    text-align: center;
+    margin-left: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s ;
+}
+
+.delete-btn:hover {
+    background-color: red;
+    
+}
+
+.delete-text {
+    padding: 5px;
+}
+
+table {
+    border-spacing: 5px;
+    width: 100%;
+    background-color: skyblue;
+}
+
+.empty-table {
+    background-color: orange;
+    text-align: center;
+    padding: 2px;
+}
