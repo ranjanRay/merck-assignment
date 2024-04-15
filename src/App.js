@@ -1,6 +1,7 @@
 import "./styles.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Table from "./Components/Table/Table";
 
 export default function App() {
   const [artworkList, setArtworkList] = useState([]);
@@ -12,7 +13,6 @@ export default function App() {
         const res = await axios.get(
           "https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,artist_titles"
         );
-        console.log("Resutls from the API", res)
         setArtworkList(res.data.data);
       } catch (err) {
         console.log(err);
@@ -32,6 +32,7 @@ export default function App() {
         Name and Display Date. Table should allow for deleting individual rows
         and sorting by date.
       </p>
+      <Table data={artworkList}/>
     </div>
   );
 }
